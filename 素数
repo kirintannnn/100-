@@ -1,0 +1,23 @@
+x=0
+for n in range(1, 101):
+        if n%3 == 0 and n%15 != 0:
+            l=str(n)+"="+"3*"+str(n//3)
+        elif n%5==0and n%15!=0:
+            l=str(n)+"="+"5*"+str(n//5)
+        elif n%3==0and n%5==0:
+            l=str(n)+"="+"3*"+"5*"+str(n//15)
+        else:
+            l=str(n)
+        for j in range(2,n+2):
+            if n <=1:
+                print(str(n))
+            if n%j ==0 and n!=j:
+                print(l)
+                break
+            if j==n:
+                x=x+1
+                print(str(l),(str(x)+"番目の素数"))
+                break
+        
+
+       
